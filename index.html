@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
+    <title>alonhi</title>
     <style>
         body {
             background-color: black;
@@ -20,6 +20,9 @@
         }
         .top-buttons {
             margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .button {
             background-color: #333;
@@ -28,8 +31,17 @@
             border: none;
             border-radius: 5px;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
+            margin: 5px;
+            font-size: 16px; /* Уменьшили размер шрифта для небольших экранов */
+        }
+        .news-section {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+        .news-item {
+            margin-bottom: 10px;
         }
         .footer {
             position: fixed;
@@ -43,15 +55,25 @@
 </head>
 <body>
     <div class="container">
-        <h1>Главная страница</h1>
+        <h1>Главная</h1>
         <div class="top-buttons">
             <a href="index.html" class="button">Главная</a>
-            <a href="404.html" class="button">Обо мне</a>
-            <a href="./calcategory/index.html" class="button">Калькуляторы</a>
+            <a href="../about/index.html" class="button">Обо мне</a>
+            <a href="./calccategory/index.html" class="button">Калькуляторы</a>
+        </div>
+        <div class="news-section">
+            <h2>Новости</h2>
+            <div class="news-item">
+                <h3>Мини обновление</h3>
+                <p>▶ Исправлено расположение кнопок на телефонах</p>
+                <p>▶ Добавлен блок новости</p>
+                <p>▶ Добавлена страница обо мне</p>
+ 
+            </div>
         </div>
     </div>
     <div class="footer">
-        <p class="copyright">2024 copy Защищено</p>
+        <p class="copyright">© 2024 alonhi</p>
     </div>
 </body>
 </html>
