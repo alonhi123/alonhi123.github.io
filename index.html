@@ -6,50 +6,91 @@
     <title>alonhi</title>
     <style>
         body {
-            background-color: black;
-            color: white;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+        
         .container {
             width: 80%;
             margin: 0 auto;
             padding: 20px;
             text-align: center;
         }
+        
         .top-buttons {
             margin-bottom: 20px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
+        
         .button {
-            background-color: #333;
-            color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             text-decoration: none;
             margin: 5px;
-            font-size: 16px; /* Уменьшили размер шрифта для небольших экранов */
+            font-size: 16px;
         }
+        
         .news-section {
             margin-top: 20px;
             padding: 10px;
-            background-color: #333;
             border-radius: 5px;
         }
+        
         .news-item {
             margin-bottom: 10px;
         }
+        
         .footer {
             position: fixed;
             bottom: 0;
             width: 100%;
+            padding: 10px 0;
+        }
+
+        .theme-toggle-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px;
+            font-size: 16px;
             background-color: #333;
             color: white;
-            padding: 10px 0;
+            cursor: pointer;
+        }
+
+        .theme-toggle-button:hover {
+            background-color: #333;
+        }
+        
+        /* Стили для темной темы */
+        .dark-theme {
+            background-color: black;
+            color: white;
+        }
+        
+        .dark-theme .button,
+        .dark-theme .news-section,
+        .dark-theme .footer {
+            background-color: #333;
+            color: white;
+        }
+        
+        /* Стили для светлой темы */
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+        
+        .light-theme .button,
+        .light-theme .news-section,
+        .light-theme .footer {
+            background-color: #f5f5f5;
+            color: black;
         }
     </style>
 </head>
@@ -60,6 +101,7 @@
             <a href="index.html" class="button">Главная</a>
             <a href="../about/index.html" class="button">Обо мне</a>
             <a href="../calcategory/index.html" class="button">Калькуляторы</a>
+            <button id="themeToggle" class="theme-toggle-button">Переключить тему</button>
         </div>
         <div class="news-section">
             <h2>Новости</h2>
@@ -70,11 +112,33 @@
                 <p>▶ Добавлена страница обо мне</p>
                 <p>▶ Изменен калькулятор тиков</p>
                 <p>▶ Изменен обычный калькулятор</p>
+                <p>▶ Добавлена смена темы</p>
             </div>
         </div>
     </div>
     <div class="footer">
         <p class="copyright">© 2024 alonhi</p>
     </div>
+
+    <script>
+        const body = document.querySelector('body');
+        const themeToggle = document.getElementById('themeToggle');
+        let isDarkTheme = localStorage.getItem('isDarkTheme') === 'true';
+
+        function toggleTheme() {
+            isDarkTheme = !isDarkTheme;
+            localStorage.setItem('isDarkTheme', isDarkTheme);
+            body.classList.toggle('dark-theme');
+            body.classList.toggle('light-theme');
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+
+        if (isDarkTheme) {
+            body.classList.add('dark-theme');
+        } else {
+            body.classList.add('light-theme');
+        }
+    </script>
 </body>
 </html>
