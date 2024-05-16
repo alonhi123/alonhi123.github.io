@@ -7,45 +7,86 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.calculator-container {
+  }
+  
+  .calculator-container {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form {
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  form {
     margin-bottom: 20px;
-}
-
-label {
+    display: flex; /* Добавлено */
+    flex-direction: column; /* Добавлено */
+    align-items: center; /* Добавлено */
+  }
+  
+  label {
     margin-right: 10px;
-}
-
-input {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
-}
-
-button, .back-link {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Добавлено */
+  }
+  
+  button,
+  .back-link {
     padding: 8px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none; /* Для ссылки */
-    display: inline-block; /* Для кнопки */
-}
-
-button:hover, .back-link:hover {
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  button:hover,
+  .back-link:hover {
     background-color: #0056b3;
-}
-
-p {
+  }
+  
+  p {
     font-size: 18px;
-}
+  }
+
+  .instructions {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 480px) {
+    /* Стили для мобильных устройств */
+    .calculator-container {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    label,
+    p {
+      font-size: 16px;
+    }
+  
+    button,
+    .back-link {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
