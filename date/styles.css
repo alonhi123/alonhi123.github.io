@@ -17,6 +17,16 @@ body {
   max-width: 400px;
   width: 90%;
   box-sizing: border-box;
+  position: relative; /* Добавлено для позиционирования кнопки "Назад" */
+}
+
+.back-button {
+  position: absolute; /* Добавлено для позиционирования кнопки "Назад" */
+  top: 10px; /* Добавлено для позиционирования кнопки "Назад" */
+  left: 10px; /* Добавлено для позиционирования кнопки "Назад" */
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
 }
 
 form div {
