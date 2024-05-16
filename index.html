@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>alonhi</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RWR226CHY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9RWR226CHY');
+</script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -117,8 +126,10 @@
         </div>
     </div>
     <div class="footer">
-        <p class="copyright">© 2024 alonhi</p>
+        <p id="online-counter">Пользователей онлайн: <span id="online-count">0</span></p>
+        <p>© 2024 alonhi</p>
     </div>
+    
 
     <script>
         const body = document.querySelector('body');
@@ -139,6 +150,7 @@
         } else {
             body.classList.add('light-theme');
         }
+        
     </script>
 </body>
 </html>
