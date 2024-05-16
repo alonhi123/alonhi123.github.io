@@ -61,10 +61,13 @@ button {
 
 .instructions h2 {
   margin-top: 0;
+  font-size: 18px;
 }
 
-.instructions ol {
+.instructions ol,
+.instructions ul {
   padding-left: 20px;
+  font-size: 14px;
 }
 
 @media (max-width: 480px) {
@@ -85,7 +88,12 @@ button {
     font-size: 16px;
   }
 
-  .instructions {
-    font-size: 14px;
+  .instructions h2 {
+    font-size: 16px;
+  }
+
+  .instructions ol,
+  .instructions ul {
+    font-size: 12px;
   }
 }
