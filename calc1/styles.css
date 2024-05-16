@@ -7,45 +7,132 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.calculator-container {
+  }
+  
+  .calculator-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form {
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  form {
     margin-bottom: 20px;
-}
-
-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  label {
     margin-right: 10px;
-}
-
-input {
+    width: 80px;
+    text-align: left;
+  }
+  
+  input {
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
-}
-
-button, .back-link {
+    flex-grow: 1;
+    box-sizing: border-box;
+  }
+  
+  .operation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .operation-buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .operation-btn {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .operation-btn:hover,
+  .operation-btn.selected {
+    background-color: #0056b3;
+  }
+  
+  .operation-btn.selected {
+    background-color: #ff6347; /* Цвет для выбранной кнопки операции */
+  }
+  
+  button[type="submit"] {
     padding: 8px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none; /* Для ссылки */
-    display: inline-block; /* Для кнопки */
-}
-
-button:hover, .back-link:hover {
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
     background-color: #0056b3;
-}
-
-p {
+  }
+  
+  .back-link {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-link:hover {
+    background-color: #0056b3;
+  }
+  
+  p {
     font-size: 18px;
-}
+  }
+  
+  @media (max-width: 480px) {
+    /* Стили для мобильных устройств */
+    .calculator-container {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    label,
+    p {
+      font-size: 16px;
+    }
+  
+    button,
+    .back-link {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }

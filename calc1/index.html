@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обычный калькулятор</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <div class="calculator-container">
-            <h2>Обычный калькулятор</h2>
-            <form id="basic-calculator">
-                <label for="num1">Число 1:</label>
-                <input type="number" id="num1" name="num1" required>
-                <label for="operation">Операция:</label>
-                <select id="operation" name="operation" required>
-                    <option value="+">+</option>
-                    <option value="-">-</option>
-                    <option value="*">*</option>
-                    <option value="/">/</option>
-                </select>
-                <label for="num2">Число 2:</label>
-                <input type="number" id="num2" name="num2" required>
-                <button type="submit">Вычислить</button>
-            </form>
-            <p id="result"></p>
-            <a href="../index.html" class="back-link">Назад</a>
+  <main>
+    <div class="calculator-container">
+      <h2>Калькулятор</h2>
+      <form id="calculator">
+        <div>
+          <label for="num1">Число 1:</label>
+          <input type="number" id="num1" name="num1" required>
         </div>
-    </main>
-    <script src="script.js"></script>
+        <div class="operation-container">
+          <label>Операция:</label>
+          <div class="operation-buttons">
+            <button type="button" class="operation-btn" value="+">+</button>
+            <button type="button" class="operation-btn" value="-">-</button>
+            <button type="button" class="operation-btn" value="*">*</button>
+            <button type="button" class="operation-btn" value="/">/</button>
+            <button type="button" class="operation-btn" value="sin">sin</button>
+            <button type="button" class="operation-btn" value="cos">cos</button>
+            <button type="button" class="operation-btn" value="tan">tan</button>
+          </div>
+        </div>
+        <div>
+          <label for="num2">Число 2:</label>
+          <input type="number" id="num2" name="num2">
+        </div>
+        <button type="submit">Вычислить</button>
+      </form>
+      <p id="result"></p>
+      <a href="../index.html" class="back-link">Назад</a>
+    </div>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
